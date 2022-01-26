@@ -4,7 +4,7 @@ pipeline {
     stages {
         stage('LaunchDocker') {
             steps {
-                sh '''
+                bat '''
                 export PATH=/sbin:/usr/sbin:/bin:/usr/bin:/usr/local/bin/
                 docker-compose up --build -d"
                 '''
