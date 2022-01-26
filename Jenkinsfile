@@ -2,11 +2,11 @@ pipeline {
     agent any
 
     stages {
-        stage('LaunchDocker') {
+        stage('Docker Comopose') {
             steps {
-                script {
-                    docker-compose up --build -d
-                }
+                sh '''
+                docker-compose up
+                '''
             }
         }
     }
